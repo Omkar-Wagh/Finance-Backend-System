@@ -14,64 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RestController
-//@RequestMapping("/api/record")
-//public class RecordController {
-//
-//    private final RecordService recordService;
-//
-//    public RecordController(RecordService recordService) {
-//        this.recordService = recordService;
-//    }
-//
-//    @GetMapping("/get-records")
-//    public ResponseEntity<List<RecordDto>> getRecords(@RequestParam(defaultValue = "0") int page,
-//                                                      @RequestParam(defaultValue = "5") int size, Authentication auth){
-//        return ResponseEntity.ok(recordService.getRecords(page, size, auth));
-//    }
-//
-//    @PostMapping("/create-record")
-//    @PreAuthorize("hasRole('ADMIN')")
-//    public ResponseEntity<RecordDto> createRecord(@RequestBody RecordRequestDto dto, Authentication auth){
-//        return ResponseEntity.ok(recordService.createRecord(dto,auth));
-//    }
-//
-//    @PutMapping("/update-record")
-//    @PreAuthorize("hasRole('ADMIN')")
-//    public ResponseEntity<RecordDto> updateRecord(@RequestBody RecordRequestDto dto, Authentication auth){
-//        return ResponseEntity.ok(recordService.updateRecord(dto, auth));
-//    }
-//
-//    @PutMapping("/delete-record/{id}")
-//    @PreAuthorize("hasRole('ADMIN')")
-//    public ResponseEntity<String> deleteRecord(@PathVariable("id") int recordId, Authentication auth){
-//        return ResponseEntity.ok(recordService.deleteRecord(recordId,auth));
-//    }
-//
-//    @GetMapping("/dashboard-data/{userId}")
-//    public ResponseEntity<DashboardResponse> getDashBoardData(@PathVariable("userId") int userId, Authentication auth){
-//        return ResponseEntity.ok(recordService.getDashBoardData(userId,auth));
-//    }
-//
-//    @GetMapping("/dashboard-global-data")
-//    public ResponseEntity<DashboardResponse> getDashBoardGlobalData(Authentication auth){
-//        return ResponseEntity.ok(recordService.getGlobalData(auth));
-//    }
-//
-//    @GetMapping("/records/search")
-//    public ResponseEntity<List<RecordDto>> searchRecords(
-//            @RequestParam(required = false) String type,
-//            @RequestParam(required = false) String category,
-//            @RequestParam(required = false) Double minAmount,
-//            @RequestParam(required = false) Double maxAmount,
-//            Authentication auth) {
-//
-//        List<RecordDto> response = recordService.searchRecords(type, category, minAmount, maxAmount, auth);
-//        return ResponseEntity.ok(response);
-//    }
-//}
-
-
 @Tag(name = "Record APIs", description = "Financial record operations")
 @SecurityRequirement(name = "bearerAuth")
 @RestController
