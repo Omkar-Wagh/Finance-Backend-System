@@ -12,34 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-//@RestController
-//@RequestMapping("/api/user")
-//public class UserController {
-//    private final UserService userService;
-//
-//    public UserController(UserService userService) {
-//        this.userService = userService;
-//    }
-//
-//    @PostMapping("/register")
-//    public ResponseEntity<UserDto> register( @Valid @RequestBody UserRequestDto dto){
-//        return ResponseEntity.ok(userService.register(dto));
-//    }
-//
-//    @PostMapping("/login")
-//    public ResponseEntity<String> login(@RequestBody UserLoginRequest dto) {
-//        return ResponseEntity.ok(userService.login(dto));
-//    }
-//
-//    @PutMapping("/update")
-//    @PreAuthorize("hasRole('ADMIN')")
-////    @PreAuthorize("hasAuthority('ADMIN')")
-//    public ResponseEntity<UserDto> updateUser(@RequestBody UserDto dto){
-//        return ResponseEntity.ok(userService.update(dto));
-//    }
-//}
-
-
 @Tag(name = "User APIs", description = "User management operations")
 @SecurityRequirement(name = "bearerAuth")
 @RestController
